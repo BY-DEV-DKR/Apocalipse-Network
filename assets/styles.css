@@ -1,0 +1,163 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #18120a;
+    color: #fff8e1;
+}
+
+.main-header {
+    background: linear-gradient(90deg, #bfa14a 0%, #e6c86e 100%);
+    color: #18120a;
+    padding-bottom: 1rem;
+}
+
+.banner {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem 1rem;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0 0 0.5rem 0;
+    color: #fff8e1;
+    text-shadow: 0 2px 12px #bfa14a;
+    letter-spacing: 2px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 16px #ffe06688);
+    animation: logo-pop 1.2s cubic-bezier(.4,2,.3,1);
+}
+
+@keyframes logo-pop {
+    0% { transform: scale(0.7) rotate(-10deg); opacity: 0; }
+    60% { transform: scale(1.1) rotate(6deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.slogan {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #fff8e1;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.7rem 1.7rem;
+    border-radius: 30px;
+    background: #bfa14a;
+    color: #18120a;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #bfa14a44;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background: #e6c86e;
+    color: #18120a;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+nav a {
+    color: #fff8e1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #bfa14a;
+}
+
+.server-info, .features, .join {
+    background: #221a0e;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    border-radius: 18px;
+    max-width: 700px;
+    box-shadow: 0 2px 16px #bfa14a22;
+}
+
+.server-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.server-info li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.copy-btn {
+    background: #bfa14a;
+    color: #18120a;
+    border: none;
+    border-radius: 20px;
+    padding: 0.3rem 1.1rem;
+    margin-left: 0.7rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.copy-btn:hover {
+    background: #e6c86e;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.feature {
+    background: #18120a;
+    border: 2px solid #bfa14a;
+    border-radius: 14px;
+    padding: 1.2rem 1rem;
+    min-width: 180px;
+    max-width: 220px;
+    flex: 1 1 180px;
+    box-shadow: 0 1px 8px #bfa14a22;
+}
+
+.feature h3 {
+    color: #e6c86e;
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem 0 0.7rem 0;
+    background: #18120a;
+    color: #bfa14a;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+    .features-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .server-info, .features, .join {
+        padding: 1.2rem 0.5rem;
+    }
+    .banner h1 {
+        font-size: 2.1rem;
+    }
+}

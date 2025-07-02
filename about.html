@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Apocalipse Network</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="banner">
+            <img src="/assets/logo.png" alt="Logo Apocalipse Network" class="logo">
+            <h1>Apocalipse Network</h1>
+            <p class="slogan">¡Sobrevive y conquista en el mejor servidor!</p>
+            <a href="index.html" class="btn-primary"><i class="fas fa-home"></i> Inicio</a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            <a href="about.html"><i class="fas fa-users"></i> Sobre Nosotros</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a>
+            <a href="https://discord.gg/apocalipsenetwork" target="_blank" class="discord-link"><i class="fab fa-discord"></i> Discord</a>
+        </nav>
+    </header>
+    <main>
+        <section class="server-info">
+            <h2><i class="fas fa-history gold-text"></i> Nuestra Historia</h2>
+            <p>Apocalipse Network nació de la pasión por Minecraft y la comunidad. Nuestro objetivo es ofrecer un espacio seguro, divertido y desafiante para jugadores de todas las edades. Nos esforzamos por mantener un ambiente amigable, con eventos constantes y un staff siempre dispuesto a ayudarte.</p>
+        </section>
+        <section class="features">
+            <h2><i class="fas fa-gem gold-text"></i> Nuestros Valores</h2>
+            <div class="features-list">
+                <div class="feature gold-border">
+                    <h3><i class="fas fa-users"></i> Comunidad</h3>
+                    <p>Fomentamos el <span class="gold-text">respeto</span>, la <span class="gold-text">amistad</span> y el <span class="gold-text">trabajo en equipo</span>.</p>
+                </div>
+                <div class="feature gold-border">
+                    <h3><i class="fas fa-lightbulb"></i> Innovación</h3>
+                    <p>Siempre buscamos nuevas formas de <span class="gold-text">sorprenderte</span> y mejorar tu experiencia.</p>
+                </div>
+                <div class="feature gold-border">
+                    <h3><i class="fas fa-headset"></i> Soporte</h3>
+                    <p>Tu <span class="gold-text">diversión</span> y <span class="gold-text">seguridad</span> son nuestra prioridad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Apocalipse Network. Todos los derechos reservados. Made by DKR.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('section').forEach((sec, i) => {
+                sec.style.opacity = 0;
+                sec.style.transform = 'translateY(40px)';
+                setTimeout(() => {
+                    sec.style.transition = 'all 0.8s cubic-bezier(.4,2,.3,1)';
+                    sec.style.opacity = 1;
+                    sec.style.transform = 'translateY(0)';
+                    sec.style.boxShadow = '0 0 32px #ffe06644';
+                }, 300 + i*200);
+            });
+
+            const title = document.querySelector('.banner h1');
+            if(title) {
+                title.style.transition = 'text-shadow 1.2s';
+                setInterval(() => {
+                    title.style.textShadow = '0 0 32px #ffe066, 0 0 64px #bfa14a';
+                    setTimeout(() => {
+                        title.style.textShadow = '0 2px 12px #bfa14a';
+                    }, 900);
+                }, 2500);
+            }
+
+            document.querySelectorAll('.btn-primary, .btn-secondary, .gold-btn').forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    btn.style.boxShadow = '0 0 24px #ffe066, 0 0 12px #bfa14a';
+                    btn.style.background = 'linear-gradient(90deg,#ffe066,#bfa14a)';
+                    btn.style.color = '#18120a';
+                });
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.boxShadow = '';
+                    btn.style.background = '';
+                    btn.style.color = '';
+                });
+            });
+
+            const navbar = document.querySelector('.navbar');
+            if(navbar) {
+                navbar.style.background = 'linear-gradient(90deg,#bfa14a 0%,#ffe066 100%)';
+                navbar.style.borderRadius = '30px';
+                navbar.style.boxShadow = '0 2px 24px #ffe06655';
+                navbar.style.padding = '0.5rem 1.5rem';
+            }
+            document.querySelectorAll('.navbar a').forEach(link => {
+                link.style.color = '#18120a';
+                link.style.fontWeight = 'bold';
+                link.style.transition = 'color 0.2s, text-shadow 0.2s';
+                link.addEventListener('mouseenter', () => {
+                    link.style.color = '#bfa14a';
+                    link.style.textShadow = '0 0 8px #ffe066';
+                });
+                link.addEventListener('mouseleave', () => {
+                    link.style.color = '#18120a';
+                    link.style.textShadow = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
